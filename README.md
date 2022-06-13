@@ -1,4 +1,5 @@
 Estruturando uma API Restful utilizando Laravel
+
 Endpoints contidos na Api abaixo:
 - Listar todas as empresas GET /api/companies 
 - Cadastrar uma empresa POST /api/companies 
