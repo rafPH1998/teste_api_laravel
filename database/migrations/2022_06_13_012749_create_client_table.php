@@ -32,7 +32,7 @@ return new class() extends Migration {
         Schema::create('client', function (Blueprint $table) {
             $table->increments('id');
             $table->string('fullname', 200)->nullable();
-            $table->string('email', 200)->nullable();
+            $table->string('email', 200)->unique()->nullable();
             $table->string('cellphone', 14)->nullable();
             $table->timestamp('updated_at')->nullable();
             $table->timestamp('created_at')->nullable();
