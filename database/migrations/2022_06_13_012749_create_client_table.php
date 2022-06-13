@@ -34,6 +34,8 @@ return new class() extends Migration {
             $table->string('fullname', 200)->nullable();
             $table->string('email', 200)->nullable();
             $table->string('cellphone', 14)->nullable();
+            $table->timestamp('updated_at')->nullable();
+            $table->timestamp('created_at')->nullable();
             $table->softDeletes();
             $table->unique('cellphone');
         });

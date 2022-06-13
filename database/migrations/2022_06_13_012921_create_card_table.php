@@ -30,7 +30,8 @@ return new class() extends Migration {
             $table->increments('id');
             $table->unsignedInteger('company_id');
             $table->unsignedInteger('client_id');
-            //$table->timestamp('created_at');
+            $table->timestamp('updated_at')->nullable();
+            $table->timestamp('created_at')->nullable();
             $table->foreign('company_id')->references('id')->on('company');
             $table->foreign('client_id')->references('id')->on('client');
         });

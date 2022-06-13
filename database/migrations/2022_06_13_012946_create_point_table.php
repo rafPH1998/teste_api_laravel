@@ -32,6 +32,8 @@ return new class() extends Migration {
             $table->unsignedInteger('card_id');
             $table->integer('points')->default(0)->nullable();
             $table->decimal('spent', 10, 2)->default(0.00)->nullable();
+            $table->timestamp('updated_at')->nullable();
+            $table->timestamp('created_at')->nullable();
             $table->softDeletes();
 
             $table->foreign('card_id')->references('id')->on('card');

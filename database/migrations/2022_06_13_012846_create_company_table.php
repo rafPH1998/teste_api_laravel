@@ -32,6 +32,8 @@ return new class() extends Migration {
             $table->increments('id');
             $table->string('company_name', 200)->nullable();
             $table->string('document', 14)->nullable();
+            $table->timestamp('updated_at')->nullable();
+            $table->timestamp('created_at')->nullable();
             $table->softDeletes();
             $table->unique('document');
         });
